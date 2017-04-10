@@ -1,5 +1,6 @@
 // const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -28,6 +29,9 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        // include: [
+        //   path.resolve(__dirname),
+        // ],
         exclude: /(node_modules|bower_components|\.spec\.js)/,
         // options: {
         //   // https://github.com/babel/babel-loader#options
