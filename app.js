@@ -17,6 +17,10 @@ function init() {
   const stats = initStats();
      // create a scene, that will hold all our elements such as objects, cameras and lights.
   const scene = new THREE.Scene();
+  scene.overrideMaterial = new THREE.MeshLambertMaterial({ color: 0xffffff });
+  // scene.fog = new THREE.FogExp2(0xffffff, 0.01);
+  scene.fog = new THREE.Fog(0xffffff, 0.015, 100);
+
      // create a camera, which defines where we're looking at.
   const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
   scene.add(camera);
@@ -50,6 +54,8 @@ function init() {
   spotLight.position.set(-40, 60, -10);
   spotLight.castShadow = true;
   scene.add(spotLight);
+
+
      // add the output of the renderer to the html element
   document.body.appendChild(renderer.domElement);
      // call the render function
