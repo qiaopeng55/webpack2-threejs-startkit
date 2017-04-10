@@ -3,6 +3,7 @@ import Stats from 'stats.js';
 import dat from 'dat.gui/build/dat.gui';
 // const THREE = require('three');
 
+
 const stats = new Stats();
 stats.showPanel(1); // 0: fps, 1: ms, 2: mb, 3+: custom
 document.body.appendChild(stats.dom);
@@ -68,6 +69,15 @@ camera.position.y = 40;
 camera.position.z = 30;
 camera.lookAt(scene.position);
 document.body.appendChild(renderer.domElement);
+
+
+window.addEventListener('resize', onResize, false);
+
+function onResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}
 
 function renderScene() {
   stats.begin();
