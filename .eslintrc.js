@@ -7,7 +7,8 @@ module.exports = {
 		"one-var": [1],
 		"no-use-before-define": [1],
 		"no-tabs": [0],
-		"no-shadow": [1]
+		"no-shadow": [1],
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
   },
   "plugins": [
     "react",
