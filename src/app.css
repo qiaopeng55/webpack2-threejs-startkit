@@ -1,0 +1,10 @@
+h1 {
+	color: orange;
+	background-color: papayawhip;
+	flex: 1;
+}
+
+.red-text {
+	color: red;
+	background: royalblue;
+}

@@ -1,7 +1,8 @@
 {
-	"plugins": ["transform-react-jsx"],
+	"plugins": ["transform-react-jsx", "react-hot-loader/babel"],
   "presets": [
     ["env", {
+			"modules": false,
       "targets": {
         "browsers": ["last 2 versions", "safari >= 7"]
       }

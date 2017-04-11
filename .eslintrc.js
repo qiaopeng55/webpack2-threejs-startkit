@@ -6,7 +6,8 @@ module.exports = {
     "default-case": 0,
 		"one-var": [1],
 		"no-use-before-define": [1],
-		"no-tabs": [0]
+		"no-tabs": [0],
+		"no-shadow": [1]
   },
   "plugins": [
     "react",
